@@ -214,6 +214,7 @@ tr:nth-of-type(even) {
 		border-bottom: 1px solid #eee; 
 		position: relative;
 		padding-left: 28%;
+        font-size: 4rem;
 	}
 
     th {
