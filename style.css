@@ -206,6 +206,8 @@ tr:nth-of-type(even) {
 	tr { 
         border: 1px solid #ccc; 
         height: initial;
+        display: flex;
+        flex-direction: column;
     }
 	
 	td { 
