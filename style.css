@@ -1,0 +1,242 @@
+/* global element styling */
+:root {
+    font-size: 62.5%
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    min-width: 800px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #0057b7; /*#ffd700*/
+    min-width: 65rem;
+    box-shadow: 0px 5px 20px 0px rgb(0, 0, 0); 
+}
+
+nav ul {
+    text-align: center;
+    padding-right: 2rem;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 1.5rem 4.5rem;
+}
+
+nav ul li a {
+    color: #ffd700;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #cfb001;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/02/Flag_of_Ukraine_%28vertical%29.svg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#main section {
+    width: 80%;
+    background: white;
+}
+
+.intro {
+    padding-top: 8rem;
+    border: 1px solid;
+}
+
+.intro_head {
+    font-size: 4rem;
+    padding: 2rem;
+}
+
+.intro_detail {
+    font-size: 2.5rem;
+    padding: 2rem 2rem 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.support_orgs {
+    margin-top: 4rem;
+}
+
+table {
+    min-width: 100%;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.table_header {
+    height: 4rem;
+}
+
+tr {
+    height: 6rem;
+}
+
+td {
+    padding-left: 1rem;
+}
+
+tr:nth-of-type(even) { 
+    background: #eee; 
+  }
+
+.contact {
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border: 1px solid;
+}
+
+.contact_email {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_email a {
+    margin-left: 1rem;
+}
+
+/* for mobile phones */
+@media screen and (max-device-width:760px), screen and (max-width:760px) {
+    html,body {
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+
+    .header {
+        font-size: 3.5rem;
+        z-index: 1;
+    }
+
+    nav ul {
+        text-align: left;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    #main {
+        background-size: contain;
+        padding-top: 22rem;
+        min-height: unset;
+    }
+
+    #main section {
+        width: 95%;
+    }
+
+    .intro {
+    }
+
+    .support_orgs {
+
+    }
+
+    .contact {
+
+    }
+
+    .contact_email {
+        flex-direction: column;
+    }
+
+    .contact_email p {
+        padding: 0 2rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+    thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { 
+        border: 1px solid #ccc; 
+        height: initial;
+    }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 28%;
+	}
+
+    th {
+        text-align: left;
+    }
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+        top: 0px;
+        left: 5px;
+        width: 25%;
+		padding-right: 10px; 
+		white-space: nowrap;
+        font-size: 4rem;
+	}
+
+    td:nth-of-type(1):before { content: "Organisation"; }
+	td:nth-of-type(2):before { content: "Information"; }
+}
+
+@media screen and (max-device-height:667px), screen and (max-height:667px) {
+    .intro {
+    }
+}
