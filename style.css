@@ -173,6 +173,14 @@ tr:nth-of-type(even) {
     .intro {
     }
 
+    .intro_head {
+        font-size: 5rem;
+    }
+
+    .intro_detail {
+        font-size: 4rem;
+    }
+
     .support_orgs {
 
     }
